@@ -28,6 +28,7 @@ public class StepDefs {
 
     @When("^I search for \"([^\"]*)\"$")
     public void i_search_for(String search) throws Throwable {
+        Thread.sleep(2000);
         Driver.getDriver().findElement(By.cssSelector("[id*='search-query']")).sendKeys(search + Keys.ENTER);
     }
 
